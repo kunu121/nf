@@ -28,14 +28,7 @@ RUN pip install pysrt
 RUN pip install protobuf
 RUN pip install pycryptodomex
 RUN apt install aria2 -y
-RUN apt install git -y && \
-	git clone https://github.com/axiomatic-systems/Bento4.git && \
-	cd Bento4 && \
-	mkdir cmakebuild && \
-	cd cmakebuild/ && \
-	cmake -DCMAKE_BUILD_TYPE=Release .. && \
-	make && \
-	make install
+RUN apt install git -y
 RUN sh sudo sh -c 'echo "deb https://mkvtoolnix.download/ubuntu/ $(lsb_release -sc) main" >> /etc/apt/sources.list.d/bunkus.org.list' && \
 	wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | sudo apt-key add - && \
 	apt-get install mkvtoolnix mkvtoolnix-gui -y
