@@ -35,7 +35,7 @@ RUN apt install git -y && \
 	cd cmakebuild/ && \
 	cmake -DCMAKE_BUILD_TYPE=Release .. && \
 	make && \
-	make install -y
+	make install
 RUN sh sudo sh -c 'echo "deb https://mkvtoolnix.download/ubuntu/ $(lsb_release -sc) main" >> /etc/apt/sources.list.d/bunkus.org.list' && \
 	wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | sudo apt-key add - && \
 	apt-get install mkvtoolnix mkvtoolnix-gui -y
