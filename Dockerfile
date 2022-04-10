@@ -29,11 +29,6 @@ RUN pip install protobuf
 RUN pip install pycryptodomex
 RUN apt install aria2 -y
 RUN apt install git -y
-RUN wget -O /usr/share/keyrings/gpg-pub-moritzbunkus.gpg https://mkvtoolnix.download/gpg-pub-moritzbunkus.gpg
-RUN echo 'deb [signed-by=/usr/share/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolnix.download/debian/ buster main' >> /etc/apt/sources.list.d/mkvtoolnix.download.list
-RUN echo 'deb-src [signed-by=/usr/share/keyrings/gpg-pub-moritzbunkus.gpg] https://mkvtoolnix.download/debian/ buster main' >> /etc/apt/sources.list.d/mkvtoolnix.download.list
-RUN apt update -y
-RUN apt install mkvtoolnix mkvtoolnix-gui
 RUN curl -O 'https://raw.githubusercontent.com/developeranaz/Rclone-olderversion-Backup/main/rclone-current-linux-amd64.zip' && \
     unzip rclone-current-linux-amd64.zip && \
     cp /rclone-*-linux-amd64/rclone /usr/bin/ && \
