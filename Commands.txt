@@ -1,0 +1,39 @@
+git clone https://github.com/axiomatic-systems/Bento4.git
+cd Bento4/
+mkdir cmakebuild
+cd cmakebuild/
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+sudo make install -y
+sudo sh -c 'echo "deb https://mkvtoolnix.download/ubuntu/ $(lsb_release -sc) main" >> /etc/apt/sources.list.d/bunkus.org.list'
+wget -q -O - https://mkvtoolnix.download/gpg-pub-moritzbunkus.txt | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install mkvtoolnix mkvtoolnix-gui -y
+sudo apt-get install ffmpeg -y
+pip3 install bs4
+pip3 install colorama
+pip3 install wcwidth
+pip3 install requests
+pip3 install ffmpy
+pip3 install inquirer
+pip3 install pycountry
+pip3 install tqdm
+pip3 install future
+pip3 install cssutils
+pip3 install pycaption
+pip3 install pymediainfo
+pip3 install isodate
+pip3 install untangle
+pip3 install tldextract
+pip3 install unidecode
+pip3 install yarl
+pip3 install natsort
+pip3 install titlecase==2.0.0
+pip3 install prettytable
+pip3 install termcolor
+pip3 install pproxy
+pip3 install pysrt
+pip3 install protobuf
+pip3 install pycryptodomex
+sudo apt-get install aria2 -y
+sudo apt-get install p7zip-full -y
